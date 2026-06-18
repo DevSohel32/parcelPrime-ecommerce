@@ -21,7 +21,15 @@ class User extends Authenticatable
      * Get the attributes that should be cast.
      *
      * @return array<string, string>
+     *
      */
+    protected $fillable = [
+        'name',
+        'email',
+        'mobile',
+        'password',
+    ];
+
     protected function casts(): array
     {
         return [

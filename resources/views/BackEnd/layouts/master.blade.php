@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,24 +10,11 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-
     <meta name="author" content="md sujaddoula sohel" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="stylesheet" type="text/css" href="{{ asset('dist-admin/css/animate.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('dist-admin/css/animation.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('dist-admin/css/bootstrap.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('dist-admin/css/bootstrap-select.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('dist-admin/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('dist-admin/font/fonts.css') }}">
-    <link rel="stylesheet" href="{{ asset('dist-admin/icon/style.css') }}">
-    <link rel="shortcut icon" href="{{ asset('dist-admin/images/favicon.ico') }}">
-    <link rel="apple-touch-icon-precomposed" href="{{ asset('dist-admin/images/favicon.ico') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('dist-admin/css/sweetalert.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('dist-admin/css/custom.css') }}">
-
-    @stack('style')
+      @include('BackEnd.layouts.style')
+      @stack('style')
 </head>
-
 <body class="body">
     <div id="wrapper">
         <div id="page" class="">
@@ -37,133 +25,9 @@
         <span></span>
     </div>
 </div> -->
-
-                <div class="section-menu-left">
-                    <div class="box-logo">
-                        <a href="{{ route('admin.index') }}" id="site-logo-inner">
-                            <h3>ParcelPrime</h3>
-                        </a>
-                        <div class="button-show-hide">
-                            <i class="icon-menu-left"></i>
-                        </div>
-                    </div>
-                    <div class="center">
-                        <div class="center-item">
-                            <div class="center-heading">Main Home</div>
-                            <ul class="menu-list">
-                                <li class="menu-item">
-                                    <a href="{{ route('admin.index') }}" class="">
-                                        <div class="icon"><i class="icon-grid"></i></div>
-                                        <div class="text">Dashboard</div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="center-item">
-                            <ul class="menu-list">
-                                <li class="menu-item has-children">
-                                    <a href="javascript:void(0);" class="menu-item-button">
-                                        <div class="icon"><i class="icon-shopping-cart"></i></div>
-                                        <div class="text">Products</div>
-                                    </a>
-                                    <ul class="sub-menu">
-                                        <li class="sub-menu-item">
-                                            <a href="add-product.html" class="">
-                                                <div class="text">Add Product</div>
-                                            </a>
-                                        </li>
-                                        <li class="sub-menu-item">
-                                            <a href="products.html" class="">
-                                                <div class="text">Products</div>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item has-children">
-                                    <a href="javascript:void(0);" class="menu-item-button">
-                                        <div class="icon"><i class="icon-layers"></i></div>
-                                        <div class="text">Brand</div>
-                                    </a>
-                                    <ul class="sub-menu">
-                                        <li class="sub-menu-item">
-                                            <a href="add-brand.html" class="">
-                                                <div class="text">New Brand</div>
-                                            </a>
-                                        </li>
-                                        <li class="sub-menu-item">
-                                            <a href="brands.html" class="">
-                                                <div class="text">Brands</div>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item has-children">
-                                    <a href="javascript:void(0);" class="menu-item-button">
-                                        <div class="icon"><i class="icon-layers"></i></div>
-                                        <div class="text">Category</div>
-                                    </a>
-                                    <ul class="sub-menu">
-                                        <li class="sub-menu-item">
-                                            <a href="add-category.html" class="">
-                                                <div class="text">New Category</div>
-                                            </a>
-                                        </li>
-                                        <li class="sub-menu-item">
-                                            <a href="categories.html" class="">
-                                                <div class="text">Categories</div>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li class="menu-item has-children">
-                                    <a href="javascript:void(0);" class="menu-item-button">
-                                        <div class="icon"><i class="icon-file-plus"></i></div>
-                                        <div class="text">Order</div>
-                                    </a>
-                                    <ul class="sub-menu">
-                                        <li class="sub-menu-item">
-                                            <a href="orders.html" class="">
-                                                <div class="text">Orders</div>
-                                            </a>
-                                        </li>
-                                        <li class="sub-menu-item">
-                                            <a href="order-tracking.html" class="">
-                                                <div class="text">Order tracking</div>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="menu-item">
-                                    <a href="slider.html" class="">
-                                        <div class="icon"><i class="icon-image"></i></div>
-                                        <div class="text">Slider</div>
-                                    </a>
-                                </li>
-                                <li class="menu-item">
-                                    <a href="coupons.html" class="">
-                                        <div class="icon"><i class="icon-grid"></i></div>
-                                        <div class="text">Coupns</div>
-                                    </a>
-                                </li>
-
-                                <li class="menu-item">
-                                    <a href="users.html" class="">
-                                        <div class="icon"><i class="icon-user"></i></div>
-                                        <div class="text">User</div>
-                                    </a>
-                                </li>
-
-                                <li class="menu-item">
-                                    <a href="settings.html" class="">
-                                        <div class="icon"><i class="icon-settings"></i></div>
-                                        <div class="text">Settings</div>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+               {{-- sidebar start --}}
+                @include('BackEnd.layouts.sidebar')
+                {{-- sidebar end --}}
                 <div class="section-content-right">
                     <div class="header-dashboard">
                         <div class="wrap">
@@ -379,9 +243,6 @@
                                     </div>
                                 </div>
 
-
-
-
                                 <div class="popup-wrap user type-header">
                                     <div class="dropdown">
                                         <button class="btn btn-secondary dropdown-toggle" type="button"
@@ -451,24 +312,14 @@
                         <div class="main-content-inner" style="height: calc(100vh - 50px);">
                                @yield('content')
                         </div>
-                        <div class="bottom-page">
-                            <div class="body-text">Copyright © 2024 md sujaddoula sohel</div>
-                        </div>
+                       @include('BackEnd.layouts.footer')
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-
-    <script src="{{ asset('dist-admin/js/jquery.min.js') }}"></script>
-    <script src="{{ asset('dist-admin/js/bootstrap.min.js') }}"></script>
-    <script src="{{ asset('dist-admin/js/bootstrap-select.min.js') }}"></script>
-    <script src="{{ asset('dist-admin/js/sweetalert.min.js') }}"></script>
-    <script src="{{ asset('dist-admin/js/apexcharts/apexcharts.js') }}"></script>
-    <script src="{{ asset('dist-admin/js/main.js') }}"></script>
-
-    @stack('script')
+    @include('BackEnd.layouts.script')
+    @stack('scripts')
 </body>
-
 </html>
