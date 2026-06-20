@@ -261,7 +261,7 @@
 
             <div class="logo">
                 <a href="{{ route('home.index') }}">
-                    <h3>ParcelPrime</h3>
+                    <img src="{{ asset("dist-front/assets/images/logo.png") }}" alt="parcelprime" style="width:195px; height: 48px; ">
                 </a>
             </div>
 
@@ -382,7 +382,7 @@
             <div class="header-desk header-desk_type_1">
                 <div class="logo">
                     <a href="{{ route('home.index') }}">
-                        <h3>ParcelPrime</h3>
+                        <img src="{{ asset("dist-front/assets/images/logo.png") }}" alt="parcelprime" style="width:195px; height: 48px; ">
                     </a>
                 </div>
 

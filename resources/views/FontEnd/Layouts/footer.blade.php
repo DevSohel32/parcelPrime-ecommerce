@@ -3,7 +3,7 @@
       <div class="row row-cols-lg-5 row-cols-2">
         <div class="footer-column footer-store-info col-12 mb-4 mb-lg-0">
           <div class="logo">
-           <h3>ParcelPrime</h3>
+           <img src="{{ asset("dist-front/assets/images/logo.png") }}" alt="parcelprime" style="width:195px; height: 48px; ">
           </div>
           <p class="footer-address">123 Beach Avenue, Surfside City, CA 00000</p>
           <p class="m-0"><strong class="fw-medium">contact@mdsujauddoulasohel.in</strong></p>

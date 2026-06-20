@@ -1,7 +1,7 @@
 <div class="section-menu-left">
                     <div class="box-logo">
                         <a href="{{ route('admin.index') }}" id="site-logo-inner">
-                            <h3>ParcelPrime</h3>
+                            <img src="{{ asset("dist-front/assets/images/logo.png") }}" alt="parcelprime" style="width:195px; height: 48px; ">
                         </a>
                         <div class="button-show-hide">
                             <i class="icon-menu-left"></i>
@@ -46,12 +46,12 @@
                                     </a>
                                     <ul class="sub-menu">
                                         <li class="sub-menu-item">
-                                            <a href="add-brand.html" class="">
+                                            <a href="{{ route('admin.brand.create') }}" class="">
                                                 <div class="text">New Brand</div>
                                             </a>
                                         </li>
                                         <li class="sub-menu-item">
-                                            <a href="brands.html" class="">
+                                            <a href="{{ route('admin.brands') }}" class="">
                                                 <div class="text">Brands</div>
                                             </a>
                                         </li>
